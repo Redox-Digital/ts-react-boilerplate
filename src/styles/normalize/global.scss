@@ -1,0 +1,17 @@
+html {
+  background-color: var(--bg-color);
+}
+
+body {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+abbr,
+abbr[title] {
+  border: none;
+  text-decoration: none;
+}

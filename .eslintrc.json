@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/destructuring-assignment": [0],
+    "no-unused-vars": ["warn"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-filename-extension": [0],
+    "class-methods-use-this": [0],
+    "react/no-unused-class-component-methods": [0],
+    "react/no-unused-state": [1],
+    "react/no-unused-prop-types": [1],
+    "react/require-default-props": [1],
+    "jsx-a11y/anchor-is-valid": [0],
+    "jsx-a11y/no-noninteractive-tabindex": ["warn"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

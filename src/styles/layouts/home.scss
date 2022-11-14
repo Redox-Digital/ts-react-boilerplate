@@ -1,0 +1,95 @@
+#home {
+  &__summary {
+    .btn {
+      margin: 40px auto;
+    }
+
+    .fullImgContainer {
+      padding: 0 !important;
+      img {
+        width: 100%;
+        height: auto;
+        box-shadow: var(--img-box-shadow);
+      }
+    }
+  }
+
+  &__collections {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 35px !important;
+
+    &Gallery a {
+      margin-bottom: var(--default-margin);
+      > img {
+        transition: all 0.3s ease-in-out;
+        max-width: 100%;
+      }
+
+      &:hover > img {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.03);
+      }
+    }
+
+    &Texts {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__community {
+    background: var(--dark-gradient);
+    margin-top: 0 !important;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > h2 {
+      text-align: center;
+    }
+
+    > article {
+      width: 300px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__FAQ {
+    background-image: url(https://picsum.photos/600/600);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 70px var(--default-margin);
+
+    > .btn {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #home {
+    &__collections {
+      flex-direction: row;
+
+      &Texts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 0;
+
+        > h2 {
+          margin-top: 0;
+          margin-bottom: 40px;
+        }
+
+        > p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

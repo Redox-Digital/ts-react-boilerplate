@@ -1,0 +1,206 @@
+footer {
+  color: var(--white);
+  background: var(--dark-gradient);
+  padding: 5rem var(--default-margin) 3rem var(--default-margin);
+
+  --footer-elt-pad: 25px;
+
+  .footer {
+    &__socials {
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--secondary-blue);
+      display: flex;
+      flex-direction: column;
+      h4 {
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+        margin-top: 1rem;
+
+        li {
+          list-style: none;
+          margin-right: 30px;
+
+          a {
+            font-size: 30px;
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 0;
+
+      > .footer__contactDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:first-of-type {
+          margin-bottom: 40px;
+        }
+
+        > i {
+          font-size: 38px;
+          border: solid var(--white) 3px;
+          border-radius: 100px;
+          padding: 15px;
+        }
+
+        > .footer__contactDetailsText {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          > h4 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+
+          // Phone number & mail
+          > a {
+            display: none;
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    &__support {
+      color: var(--white);
+
+      > ul {
+        margin: 0;
+        padding: 0;
+
+        > li {
+          border-top: solid 1px var(--secondary-blue);
+          list-style: none;
+
+          > a {
+            color: var(--white);
+
+            > h3 {
+              margin: 0;
+              padding-top: var(--footer-elt-pad);
+              padding-bottom: var(--footer-elt-pad);
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &Payments {
+        margin-top: calc(70px - var(--footer-elt-pad));
+        margin-bottom: 70px;
+
+        > img {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 50px var(--default-margin) 30px var(--default-margin);
+    .footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &__contact {
+        flex-grow: 1;
+        justify-content: center;
+
+        > .footer__contactDetails {
+          flex-direction: row;
+
+          > i {
+            margin-right: 20px;
+          }
+
+          > .footer__contactDetailsText {
+            align-items: flex-start;
+
+            > h4 {
+              margin: 0;
+              margin-bottom: 5px;
+            }
+
+            > a {
+              display: flex;
+              font-size: var(--fs-h6);
+              letter-spacing: -0.01em;
+              text-decoration: underline;
+              margin-bottom: 5px;
+            }
+
+            > small {
+              font-weight: 300;
+              font-size: var(--fs-h6);
+              letter-spacing: -0.01em;
+            }
+          }
+        }
+      }
+
+      &__support {
+        width: 300px;
+
+        > h4 {
+          margin-top: 60px;
+          margin-bottom: 30px;
+        }
+
+        > ul > li > a > h3 {
+          font-family: 'Montserrat', sans-serif;
+          font-size: var(--fs-h6);
+          letter-spacing: -0.01em;
+          padding-top: var(--default-margin);
+          padding-bottom: var(--default-margin);
+        }
+      }
+
+      &__socials {
+        width: 100%;
+        flex-direction: row;
+
+        align-items: center;
+
+        > ul {
+          margin: 0;
+          margin-left: 40px;
+        }
+      }
+
+      &__bottom {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        &Payments {
+          margin: 0;
+          width: 300px;
+
+          > img {
+          }
+        }
+      }
+    }
+  }
+}

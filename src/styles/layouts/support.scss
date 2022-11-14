@@ -1,0 +1,32 @@
+#support {
+  &__contact {
+    text-align: center;
+    > .contactBlocks {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__faq,
+  &__conditions {
+    margin: auto;
+    margin-bottom: 140px;
+    padding: var(--default-margin);
+    max-width: 750px;
+    > h3 {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__care {
+    background: var(--dark-gradient);
+    color: var(--white);
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+    > h2 {
+      text-align: center;
+    }
+  }
+}

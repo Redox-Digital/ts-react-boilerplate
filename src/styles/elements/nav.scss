@@ -1,0 +1,168 @@
+nav {
+  background-color: var(--white);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - (2 * var(--default-margin)));
+    height: var(--navbar-height);
+    margin-left: var(--default-margin);
+    margin-right: var(--default-margin);
+
+    &Decoration {
+      background: var(--primary-gradient);
+      height: 4px;
+      width: calc(100vw - (2 * var(--default-margin)));
+      margin-left: var(--default-margin);
+      margin-right: var(--default-margin);
+      z-index: 11;
+      position: relative;
+      top: 2px;
+      border-radius: 100px;
+    }
+
+    &Left,
+    &Right {
+      display: none;
+      a {
+        color: var(--black);
+        white-space: nowrap;
+      }
+    }
+
+    &Left a {
+      margin-left: 25px;
+    }
+
+    &Right {
+      align-items: center;
+
+      a {
+        margin-right: 25px;
+      }
+
+      &__pictograms {
+        display: flex;
+        flex-direction: row;
+
+        > a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          > span {
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+
+    &Burger {
+      width: 26px;
+      z-index: 12;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &.isOpen .iconLabel::after {
+        content: 'Fermer';
+      }
+
+      .iconLabel {
+        transform: translateY(2px);
+        &::after {
+          content: 'Menu';
+        }
+      }
+
+      > a {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .burger {
+        background-color: var(--primary-blue);
+        height: 4px;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      .burger + .burger {
+        margin-top: 3px;
+      }
+
+      &.isOpen .burger:nth-child(1) {
+        animation: all ease 0.3s;
+        transform: translateY(7px) rotate(-45deg);
+      }
+
+      &.notOpen .burger:nth-child(1) {
+        animation: all ease 0.3s;
+        transform: rotate(0);
+      }
+
+      &.isOpen .burger:nth-child(2) {
+        animation: ease 0.3s;
+        transform: scale(0);
+      }
+
+      &.notOpen .burger:nth-child(2) {
+        animation: ease 0.3s;
+        transform: scale(1);
+      }
+
+      &.isOpen .burger:nth-child(3) {
+        animation: ease 0.3s;
+        transform: translateY(-7px) rotate(45deg);
+      }
+
+      &.notOpen .burger:nth-child(3) {
+        animation: ease 0.3s;
+        transform: rotate(0);
+      }
+    }
+
+    &Mid {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-left: -26px;
+
+      img {
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  nav .menu {
+    &Left,
+    &Right {
+      display: flex;
+    }
+  }
+
+  nav .menu .menuRight .menuRight__pictograms {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  nav .menu .menuRight .menuRight__pictograms {
+    display: flex;
+  }
+}

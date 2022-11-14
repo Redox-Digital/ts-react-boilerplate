@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'Sonika';
+  src: url('../fonts/Sonika-Bold.eot');
+  src: url('../fonts/Sonika-Bold.woff') format('woff'),
+    url('../fonts/Sonika-Bold.woff2') format('woff2'),
+    url('../fonts/Sonika-Bold.ttf') format('truetype'),
+    url('../fonts/Sonika-Bold.svg') format('svg');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Sonika';
+  src: url('../fonts/Sonika-Regular.eot');
+  src: url('../fonts/Sonika-Regular.woff') format('woff'),
+    url('../fonts/Sonika-Regular.woff2') format('woff2'),
+    url('../fonts/Sonika-Regular.ttf') format('truetype'),
+    url('../fonts/Sonika-Regular.svg') format('svg');
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-p);
+  color: var(--black);
+}
+
+p {
+  line-height: 1.4em;
+}
+
+small {
+  font-size: var(--fs-sm);
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Sonika', 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: var(--fs-h1);
+  letter-spacing: 0.03em;
+  line-height: 1.15em;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: var(--fs-h3);
+  line-height: 1.15em;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  letter-spacing: 0.1em;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: var(--fs-h5);
+  line-height: 1.2em;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: var(--fs-h6);
+  letter-spacing: -0.01em;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: var(--fs-btn);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.iconLabel {
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 11px;
+  text-align: center;
+}
+
+.primaryColor {
+  color: var(--primary-blue) !important;
+}
