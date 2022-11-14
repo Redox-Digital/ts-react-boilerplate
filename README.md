@@ -2,6 +2,8 @@
 
 App adaptable for a TS React project. Boilerplate created by [Redox Digital](https://redoxdigital.ch).
 
+This BP includes Sass.
+
 ## Getting started
 
 ```shell
@@ -102,8 +104,8 @@ In all case, make sure to close the issue when you fix it.
 
 ## Contributors
 
-<a href="https://github.com/Redox-Digital/everymoment-api/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=Redox-Digital/everymoment-app"/>
+<a href="https://github.com/Redox-Digital/ts-react-boilerplate/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Redox-Digital/ts-react-boilerplate"/>
 </a>
 
 ## Technologies
