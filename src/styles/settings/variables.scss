@@ -1,75 +1,83 @@
 * {
-  --white: #ffffff;
-  --light-blue: #e8f0fa;
-  --secondary-blue: #549ee8;
-  --primary-blue: #145cb0;
-  --dark-blue: #161b33;
-  --black: #333;
-  --secondary-orange: #b0531c;
-  --primary-orange: #fc7f35;
-  --bg-color: #f0f0f3;
+  // Theme colors
+  --primary: #01a8eb;
+  --primary-dark: #009b9e;
+  --primary-light: #78fdff;
 
-  --dark-gradient: linear-gradient(89.59deg, #052b57 2.84%, #161b33 99.66%);
-  --primary-gradient: linear-gradient(92.77deg, #003d85 -4.91%, #248dff 78.57%, #007af3 103.39%);
-  --primary-gradient-reverse: linear-gradient(
-    92.77deg,
-    #007af3 -4.91%,
-    #248dff 78.57%,
-    #003d85 103.39%
+  --secondary: #eb7c00;
+  --secondary-dark: #9e5300;
+  --secondary-light: #ebb272;
+
+  --bg-color: #fafafa;
+
+  // Colors
+  --black: #181818;
+  --gray: #888888;
+  --white: #fafafa;
+  --success: #0da100;
+  --danger: #dd5449;
+  --warning: #ff9900;
+  --info: #0400ff;
+
+  --primary-gradient: linear-gradient(
+    135.23deg,
+    var(--primary-dark) 15.1%,
+    var(--primary-light) 80.41%
   );
-  --white-gradient: linear-gradient(92.03deg, #e2e2e2 -12.57%, #ffffff 50.7%, #f3f3f3 107.18%);
+  --primary-gradient-reverse: linear-gradient(
+    135.23deg,
+    var(--primary-light) 15.1%,
+    var(--primary-dark) 80.41%
+  );
 
-  --drop-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25), -4px -4px 8px #ffffff;
-  --hover-box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.25), 4px 4px 8px #ffffff;
-  --clicked-box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.25),
-    inset 4px 4px 8px rgba(255, 255, 255, 0.25);
-  --focus-box-shadow: 0px 0px 10px #fc7f35;
-  --img-box-shadow: 0px -6px 20px #ffffff, 0px 6px 20px rgba(20, 92, 176, 0.25);
-  --article-box-shadow: 2px 2px 8px #000000;
-  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-small: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-hover: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  --inner-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
 
-  --fs-h1: 34px;
-  --fs-h2: 30px;
-  --fs-h3: 26px;
-  --fs-h4: 22px;
+  --fs-h1: 60px;
+  --fs-h2: 40px;
+  --fs-h3: 25px;
+  --fs-h4: 20px;
   --fs-h5: 19px;
-  --fs-h6: 15px;
+  --fs-h6: 16px;
   --fs-p: 16px;
   --fs-sm: 15px;
-  --fs-xs: 9px;
-  --fs-btn: 18px;
+  --fs-xs: 10px;
+  --fs-btn: 17px;
 
-  --default-margin: 15px;
-  --default-padding: 10px;
-  --default-border-radius: 10px;
-  --navbar-height: 60px;
+  --default-margin: 20px;
+  --default-padding: 15px;
+  --default-border-radius: 15px;
+  --small-border-radius: 8px;
+  --navbar-height: 80px;
 }
 
 #phone::before {
-  content: '+41 79 000 00 00';
+  content: '+41 00 000 00 00';
   display: inline;
 }
 
 #mail::before {
-  content: 'info@everymoment.ch';
+  content: 'contact@mon-domain.ch';
   display: inline;
 }
 
 @media screen and (min-width: 768px) {
   * {
-    --fs-h1: 55px;
-    --fs-h2: 40px;
-    --fs-h3: 32px;
+    --fs-h1: 80px;
+    --fs-h2: 48px;
+    --fs-h3: 28px;
     --fs-h4: 24px;
-    --fs-h5: 21px;
-    --fs-h6: 16px;
-    --fs-p: 18px;
-    --fs-sm: 17px;
+    --fs-h5: 19px;
+    --fs-h6: 17px;
+    --fs-p: 17px;
+    --fs-sm: 15px;
     --fs-xs: 10px;
-    --fs-btn: 20px;
+    --fs-btn: 17px;
 
     --default-margin: 20px;
-    --navbar-height: 70px;
     --default-padding: 15px;
+    --navbar-height: 80px;
   }
 }

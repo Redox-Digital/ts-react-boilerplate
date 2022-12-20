@@ -1,24 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* CUSTOM FONT IMPORT EXAMPLE
 @font-face {
-  font-family: 'Sonika';
-  src: url('../fonts/Sonika-Bold.eot');
-  src: url('../fonts/Sonika-Bold.woff') format('woff'),
-    url('../fonts/Sonika-Bold.woff2') format('woff2'),
-    url('../fonts/Sonika-Bold.ttf') format('truetype'),
-    url('../fonts/Sonika-Bold.svg') format('svg');
+  font-family: 'FontName';
+  src: url('../fonts/CustomFont.eot');
+  src: url('../fonts/CustomFont.woff') format('woff'),
+    url('../fonts/CustomFont.woff2') format('woff2'),
+    url('../fonts/CustomFont.ttf') format('truetype'),
+    url('../fonts/CustomFont.svg') format('svg');
   font-weight: 700;
 }
-
-@font-face {
-  font-family: 'Sonika';
-  src: url('../fonts/Sonika-Regular.eot');
-  src: url('../fonts/Sonika-Regular.woff') format('woff'),
-    url('../fonts/Sonika-Regular.woff2') format('woff2'),
-    url('../fonts/Sonika-Regular.ttf') format('truetype'),
-    url('../fonts/Sonika-Regular.svg') format('svg');
-  font-weight: 400;
-}
+*/
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -40,7 +32,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Sonika', 'Montserrat', sans-serif;
+  font-family: 'CustomFont', 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -85,16 +77,4 @@ h6 {
   font-size: var(--fs-btn);
   font-weight: 600;
   letter-spacing: 0.05em;
-}
-
-.iconLabel {
-  font-size: var(--fs-xs);
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 11px;
-  text-align: center;
-}
-
-.primaryColor {
-  color: var(--primary-blue) !important;
 }

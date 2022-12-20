@@ -1,0 +1,35 @@
+.hero {
+  background-image: url('../assets/img/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: var(--primary);
+  backdrop-filter: saturate(0);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--white);
+    text-shadow: var(--drop-shadow);
+    // Color overlay
+    background: rgba(70, 127, 43, 0.6);
+  }
+
+  &--full {
+    height: 75vh;
+  }
+
+  &--demi {
+    height: 55vh;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h4 {
+    color: var(--light-green);
+  }
+}

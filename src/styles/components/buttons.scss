@@ -1,10 +1,28 @@
 .btn {
-  transition: all 0.3s ease-in-out;
-  height: 50px;
   display: flex;
-  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--default-border-radius);
   justify-content: center;
   align-items: center;
+  box-shadow: var(--drop-shadow);
+  padding: 11px 20px;
+  border: transparent solid 1px;
+  width: fit-content;
+
+  &:hover {
+    box-shadow: var(--drop-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    border: var(--black) solid 1px;
+    transform: translateY(0px);
+    box-shadow: none;
+  }
+
+  > i {
+    margin-right: 8px;
+  }
 }
 
 .btn--sm {
@@ -12,42 +30,44 @@
 }
 
 .btn--primary {
-  background: var(--primary-gradient);
-  color: var(--white);
-  box-shadow: var(--drop-box-shadow);
+  background: var(--primary);
 
   &:hover {
     transition: all 0.3s ease-in-out;
-    background: var(--primary-gradient-reverse);
-    box-shadow: var(--hover-box-shadow);
   }
 
   &:focus {
-    background: var(--primary-gradient-reverse);
-    box-shadow: var(--focus-box-shadow);
   }
 
   &:active {
-    background: var(--primary-gradient);
-    box-shadow: var(--clicked-box-shadow);
   }
 }
 
 .btn--secondary {
-  background: var(--white-gradient);
+  background: var(--secondary);
   color: var(--black);
-  box-shadow: var(--drop-box-shadow);
 
   &:hover {
-    box-shadow: var(--hover-box-shadow);
   }
 
   &:focus {
-    box-shadow: var(--focus-box-shadow);
   }
 
   &:active {
-    box-shadow: var(--active-box-shadow);
+  }
+}
+
+.btn--white {
+  background: var(--white);
+  color: var(--black);
+
+  &:hover {
+  }
+
+  &:focus {
+  }
+
+  &:active {
   }
 }
 
@@ -55,9 +75,17 @@
   width: 100%;
 }
 
+.btn--img {
+  gap: 8px;
+  > img {
+    height: 24px;
+    width: auto;
+  }
+}
+
 @media (min-width: 768px) {
   .btn {
-    max-width: 250px;
+    max-width: 300px;
     margin: auto;
   }
 }

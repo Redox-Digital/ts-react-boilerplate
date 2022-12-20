@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import MainMenu from './components/MainMenu';
-import Footer from './components/Footer';
+import MainMenu from './elements/MainMenu';
+import Footer from './elements/Footer';
+import About from './pages/About';
 import Error404 from './pages/Error404';
 import Home from './pages/Home';
 
@@ -11,6 +12,7 @@ export default function App() {
       <MainMenu />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
       <Footer />

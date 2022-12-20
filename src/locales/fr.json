@@ -1,0 +1,20 @@
+{
+  "PageName": {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+  },
+  "Menu": {
+    "home": "Accueil",
+    "about": "À propos",
+    "cta": "Call to action"
+  },
+  "Home": {
+    "mainTitle": "Accueil",
+    "subtitle": "Sous-titre personnalisé"
+  },
+  "About": {
+    "mainTitle": "À propos",
+    "subtitle": "Sous-titre personnalisé"
+  }
+}

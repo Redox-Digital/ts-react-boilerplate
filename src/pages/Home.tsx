@@ -1,5 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import Hero from '../components/Hero';
 
 export default function Home() {
-  return <main id="home">Home</main>;
+  const { t } = useTranslation('', { keyPrefix: 'Home' });
+
+  return (
+    <main id="home">
+      <Hero page="Home" imgPath="../assets/layouts/team-cover.jpg" full />
+      <section className="container">{t('mainTitle')}</section>
+    </main>
+  );
 }

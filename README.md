@@ -4,6 +4,18 @@ App adaptable for a TS React project. Boilerplate created by [Redox Digital](htt
 
 This BP includes Sass.
 
+### 🔍 Overview
+
+### ⚛️ Boilerplate Features
+
+- **React:** A JavaScript library for building user interfaces.
+- **TypeScript:** Written in TypeScript language.
+- **Webpack:** Automation of tasks and compilation of the project.
+- **ESLint:** Linting for Scripts.
+- **Prettier:** Formatter for Scripts and Styles.
+
+---
+
 ## Getting started
 
 ```shell

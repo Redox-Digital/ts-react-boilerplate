@@ -4,6 +4,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
+  box-shadow: var(--drop-shadow);
   top: 0px;
   left: 0px;
 
@@ -14,51 +15,47 @@ nav {
     height: var(--navbar-height);
     margin-left: var(--default-margin);
     margin-right: var(--default-margin);
-
-    &Decoration {
-      background: var(--primary-gradient);
-      height: 4px;
-      width: calc(100vw - (2 * var(--default-margin)));
-      margin-left: var(--default-margin);
-      margin-right: var(--default-margin);
-      z-index: 11;
-      position: relative;
-      top: 2px;
-      border-radius: 100px;
-    }
+    justify-content: space-between;
+    text-align: center;
 
     &Left,
     &Right {
-      display: none;
-      a {
-        color: var(--black);
-        white-space: nowrap;
-      }
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
 
-    &Left a {
-      margin-left: 25px;
+    &Left {
+      width: 75px;
+
+      > a {
+        width: 100%;
+      }
     }
 
     &Right {
-      align-items: center;
+      display: none;
+      gap: var(--default-margin);
 
-      a {
-        margin-right: 25px;
-      }
+      > a:not(.btn) {
+        color: var(--black);
+        text-decoration: none;
 
-      &__pictograms {
-        display: flex;
-        flex-direction: row;
+        &.selected {
+          font-weight: 700;
 
-        > a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          > span {
-            padding-top: 2px;
+          &::after {
+            content: '';
+            width: 100%;
+            margin-bottom: -2px;
+            display: block;
+            border-top: dashed 2px var(--red);
           }
+        }
+
+        &:hover {
+          font-weight: 600;
         }
       }
     }
@@ -90,7 +87,7 @@ nav {
       }
 
       .burger {
-        background-color: var(--primary-blue);
+        background: var(--primary-gradient);
         height: 4px;
         display: block;
         width: 100%;
@@ -156,13 +153,75 @@ nav {
     }
   }
 
-  nav .menu .menuRight .menuRight__pictograms {
+  nav .menu .menuRight {
+    display: flex;
+  }
+
+  #burgerBtn {
     display: none;
   }
 }
 
 @media (min-width: 992px) {
-  nav .menu .menuRight .menuRight__pictograms {
+  nav .menu .menuRight {
     display: flex;
+  }
+}
+
+// ##### Mobile Menu #####
+
+.menuMobile {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  padding: var(--default-margin);
+  overflow-y: scroll;
+  position: absolute;
+  top: var(--navbar-height);
+  right: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: var(--white);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &--closed {
+    transition: all 0.5s ease-in-out;
+    right: calc(-1 * 110vw);
+  }
+
+  > a:not(.btn) {
+    color: var(--black);
+    text-decoration: none;
+    padding-top: var(--default-margin);
+    padding-bottom: var(--default-margin);
+    border-bottom: #cdcdcd 1px solid;
+
+    &.selected {
+      font-weight: 700;
+      text-decoration: underline var(--red) 2px dashed;
+
+      /*
+      &::after {
+        content: '';
+        width: inherit;
+        margin-bottom: -2px;
+        display: block;
+        border-top: dashed 2px var(--red);
+      }*/
+    }
+  }
+
+  &__langSelector {
+    margin-top: 30px;
+    i {
+      color: var(--primary-blue);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menuMobile {
+    display: none;
+    visibility: hidden;
   }
 }
