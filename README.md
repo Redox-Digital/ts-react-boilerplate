@@ -4,6 +4,8 @@ App adaptable for a TS React project. Boilerplate created by [Redox Digital](htt
 
 This BP includes Sass.
 
+*This README is a work in progress and is still incomplete.*
+
 ### 🔍 Overview
 
 ### ⚛️ Boilerplate Features
@@ -13,6 +15,7 @@ This BP includes Sass.
 - **Webpack:** Automation of tasks and compilation of the project.
 - **ESLint:** Linting for Scripts.
 - **Prettier:** Formatter for Scripts and Styles.
+- **Sass:** CSS extension language.
 
 ---
 
